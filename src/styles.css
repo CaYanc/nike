@@ -428,7 +428,7 @@
 
 
 
-  @media(width > 500px){
+  @media(width > 650px){
     .app{
       display: none;
       width: 70%;
