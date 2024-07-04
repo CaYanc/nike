@@ -6,10 +6,11 @@ import cajanike from '../assets/cajanike.png'
 import { CiShoppingCart } from 'react-icons/ci'
 import { AiOutlineAccountBook, AiOutlineShopping } from 'react-icons/ai'
 import { userContext } from '../Context/UserProvider'
+import MenuTop from './MenuTop'
 
 
 
-const Popup = ({setEstado,setImg}) => {
+const Popup = ({setEstado,setImg,setNombre,setPrecio}) => {
 
     const {sumar} = useContext(userContext)
 
@@ -23,8 +24,8 @@ const Popup = ({setEstado,setImg}) => {
     }
 
   return (
-    <div className='content_popup'>
-        <div className='popup'>
+      <div className='content_popup'>
+        <div className='popup '>
         <div className='popup_size'>
             <h2>Size</h2>
             <div className='size'>
@@ -44,7 +45,7 @@ const Popup = ({setEstado,setImg}) => {
             </div>
 
             <div className='precio'>
-            <h2>$90.99</h2>
+            <h2>${setPrecio}</h2>
             <p>10% OFF</p>
         </div>
         </div>
@@ -80,7 +81,7 @@ const Popup = ({setEstado,setImg}) => {
         </div>
 
         
-    </div>
+        </div>
     </div>
   )
 }

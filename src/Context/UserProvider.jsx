@@ -13,7 +13,7 @@ const UserProvider = ({children}) => {
 
 
   return (
-    <userContext.Provider value={{carrito, sumar}}>
+    <userContext.Provider value={{carrito, sumar,}}>
         {children}
     </userContext.Provider>
   )

@@ -5,17 +5,17 @@ import { CiTextAlignLeft } from 'react-icons/ci'
 import { userContext } from '../Context/UserProvider'
 
 
-const MenuTop = () => {
+const MenuTop = ({nombre}) => {
 
   const {carrito} = useContext(userContext)
 
 
   return (
-    <div className='content_menu_top'>
+    <div className='content_menu_top '>
         <div className='icon_menu_top'>
             <CiTextAlignLeft />
         </div>
-        <div>NIKE</div>
+        <div>{nombre}</div>
         <div className='icon_menu_top'>
             <AiOutlineShopping />
             <div className='carrito'>

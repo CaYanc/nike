@@ -2,7 +2,7 @@ import React from 'react'
 import img1 from '../assets/img1.png'
 import { FaArrowRight } from "react-icons/fa";
 
-const Products = ({nombre,img, precio,setEstado,setImg}) => {
+const Products = ({nombre,img, precio,setEstado,setImg,setNombre,setPrecio}) => {
 
   return (
     <div className='products'>
@@ -13,7 +13,9 @@ const Products = ({nombre,img, precio,setEstado,setImg}) => {
         <p>$ {precio}</p>
         <button onClick={()=>{
           setEstado(true),
-          setImg(img)
+          setImg(img),
+          setNombre(nombre),
+          setPrecio(precio)
           }}><FaArrowRight /></button>
     </div>
   )

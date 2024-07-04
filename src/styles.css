@@ -7,6 +7,8 @@
   flex-direction: column;
   gap: 10px;
   overflow-x: hidden;
+  margin: 0 auto;
+
 }
 /* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
 /* component slider */
@@ -60,7 +62,8 @@
 
   .content_menu_top{
     position: fixed;
-    width: 85%;
+    left: 0;
+    width: 90%;
     z-index: 50;
     background-color: #fff;
     top: 0px;
@@ -139,7 +142,7 @@
  .menu_mitad{
   padding: 0 10px;
   display: flex;
-  gap: 50px;
+  gap: 60px;
 
   p:hover{
     border-bottom: 2px solid;
@@ -150,8 +153,10 @@
 
 .content_productos{
   display: flex;
-  gap: 1.5px;
+  justify-content: space-between;
   flex-wrap: wrap;
+  width: 100%;
+  row-gap: 6px;
 }
 
 
@@ -160,21 +165,22 @@
 
   .products{
     background-color: #ddd;
-    padding:0  5px;
+    padding:  10px;
     border-radius: 10px;
-    width: 170px;
+    width: 49%;
     height: 200px;
     box-sizing: border-box;
     position: relative;
 
     figure{
       height: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
       img{
         position: relative;
-        top: -20px;
-        left: -50px;
-        width: 180px;
+        width: 150%;
         object-fit: contain;
       }
 
@@ -198,29 +204,36 @@
   position:fixed;
   /* right: -100%; */
   top: 56px;
+  left: 0;
   z-index: 100;
+  padding:0 20px;
   display: flex;
+  align-items: start;
   height: 100%;
   width: 100%;
   transition: all 1s;
 
 
   .popup_size{
+    position: relative;
+    top: 10%;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    font-size: 10px;
+    font-size: 100%;
+
+    
 
 
     .size{
 
       border: 1px solid #aaa;
-      padding: 5px;
+      padding: 10px;
       border-radius: 5px;
     }
     .precio{
       position: absolute;
-      bottom: 200px;
+      bottom:-60%;
       h2{
         font-size: 30px;
       }
@@ -234,16 +247,17 @@
   
 .popup_right{
   display: flex;
+  justify-content: center;
   flex-direction: column;
   gap: 100px;
   position: relative;
-  top: 20px;
+  top: 10%;
   
 
   .guardar{
     border-radius: 5px;
     display: flex;
-    gap: 5px;
+    gap: 10px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -251,8 +265,8 @@
     div{
       border: 1px solid;
       border-radius: 5px;
-      width: 20px;
-      height: 20px;
+      width: 30px;
+      height: 30px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -262,15 +276,15 @@
   .popup_colors{
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 10px;
 
 
     .azul{
 
       border: 1px solid;
       border-radius: 5px;
-      width: 20px;
-      height: 20px;
+      width: 30px;
+      height: 30px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -290,8 +304,8 @@
 
       border: 1px solid;
       border-radius: 5px;
-      width: 20px;
-      height: 20px;
+      width: 30px;
+      height: 30px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -314,20 +328,21 @@
 
 .popup_img{
 
-  width: 75%;
+  width: 70%;
   display: flex;
   justify-content: center;
 
   .nike{
-    width: 130px;
-    height: 300px;
+    width: 50%;
+    /* height: 300px; */
 
   }
 
   .zapato{
-    left: -0px;
+    top: 0%;
+    left: -20%;
     position: absolute;
-    width: 300px;
+    width: 120%;
     rotate: -30deg;
   }
 
@@ -379,12 +394,18 @@
       height: 20px;
       position: absolute;
       top: 130px;
-      left: -90px;
+      left: -70px;
     }
 
 
   }
 
+}
+
+
+.dark{
+  background-color: #000;
+  color: #fff;
 }
 
 
@@ -407,5 +428,6 @@
     .app{
       width: 70%;
       filter: hue-rotate();
+
     }
   }

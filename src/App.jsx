@@ -14,6 +14,9 @@ function App() {
 
   const [estado, setEstado] = useState(false)
   const [img, setImg] = useState()
+  const [nombre, setNombre] = useState()
+  const [precio, setPrecio] = useState()
+
 
 
   return (
@@ -21,18 +24,20 @@ function App() {
       <UserProvider>
         <div className='app'>
         <div className='content_meutop'>
-          <MenuTop/>
+          <MenuTop nombre={estado && nombre}/>
         </div>
         <Slider/>
         <MenuMitad/>
 
         <div className='content_productos'>
-          <Products nombre='Air Max 97' precio='20.99' img={img1} setEstado={setEstado} setImg={setImg}/>
-          <Products nombre='React Presto' precio='29.00' img={img2} setEstado={setEstado}  setImg={setImg}/>
-          <Products nombre='Air Max 200 SE' precio='60.44' img={img3} setEstado={setEstado}  setImg={setImg}/>
-          <Products nombre='React Presto' precio='124.00' img={img1} setEstado={setEstado}  setImg={setImg}/>
+          <Products nombre='Air Max 97' precio='20.99' img={img1} setEstado={setEstado} setImg={setImg} setNombre={setNombre} setPrecio={setPrecio}/>
+          <Products nombre='React Presto' precio='29.00' img={img2} setEstado={setEstado}  setImg={setImg} setNombre={setNombre} setPrecio={setPrecio}/>
+          <Products nombre=' Max 200 ' precio='60.44' img={img3} setEstado={setEstado}  setImg={setImg} setNombre={setNombre} setPrecio={setPrecio}/>
+          <Products nombre='Presto Nike' precio='124.00' img={img1} setEstado={setEstado}  setImg={setImg} setNombre={setNombre} setPrecio={setPrecio}/>
+          <Products nombre='Air 1200 ' precio='60.44' img={img3} setEstado={setEstado}  setImg={setImg} setNombre={setNombre} setPrecio={setPrecio}/>
+          <Products nombre='Retro 4' precio='60.44' img={img2} setEstado={setEstado}  setImg={setImg} setNombre={setNombre} setPrecio={setPrecio}/>
         </div>
-        {estado && <Popup setEstado={setEstado} setImg={img}/>}
+        {estado && <Popup  setEstado={setEstado} setImg={img} setPrecio={precio}/>}
       </div>
       // </UserProvider>
     
