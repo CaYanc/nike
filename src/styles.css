@@ -339,10 +339,10 @@
   }
 
   .zapato{
-    top: 0%;
-    left: -20%;
+    top: 5%;
+    left: -10%;
     position: absolute;
-    width: 120%;
+    width: 100%;
     rotate: -30deg;
   }
 
@@ -420,14 +420,24 @@
 
 
 
+.cell{
+  display: none;
+  margin: 200px auto;
+  text-align: center;
+}
 
 
 
-
-  @media(width > 900px){
+  @media(width > 500px){
     .app{
+      display: none;
       width: 70%;
       filter: hue-rotate();
+
+    }
+
+    .cell{
+      display: block;
 
     }
   }
